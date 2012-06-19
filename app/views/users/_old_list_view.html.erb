@@ -1,0 +1,25 @@
+<div class="box">
+		<h4 class="white">Completed Tasks</h4>
+  <div class="box-container">     		
+		<table class="table-long" id="completed-tasks">
+			<thead>
+				<tr>
+					<td>Deadline</td>
+					<td>Description</td>
+				</tr>
+			</thead>
+			<tfoot>
+			</tfoot>
+      	<tbody>
+        		<% @tasks.each do |t| %>
+          	<% if t.completed %>
+          	<tr class='<%= cycle("odd", "") %>'>
+            		<td class="col-first"><%= t.deadline %></td>
+            		<td class="col-second"><%= t.description %></td>
+          	</tr>
+          	<%end%>
+          	<%end%>
+			</tbody>
+		</table>  	
+	</div><!-- end of div.box-container -->
+	</div> <!-- end of div.box -->

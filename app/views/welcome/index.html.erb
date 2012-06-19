@@ -1,0 +1,44 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag 'welcome' %>
+<% end -%>
+
+<div id="distance"></div>
+<div id="container">
+<% flash.each do |key, value| %>
+<%= content_tag(:div, value, :class => "flash #{key}") %>
+<% end %> 
+  
+		<div id="top"><h1><a href="#">Git 'Er Dun!</a></h1></div>
+    <div id="form-container">
+      <%= form_for :user, :url => new_user_session_url, :method => :post do |f| %>
+			<fieldset>
+				<legend>Login</legend>
+        <ol>
+            <li>
+              <%= f.label :email, "E-Mail:", :class => "field-title" %>
+              <label class="txt-field">
+                <%= f.email_field :email %>
+              </label>
+            </li>
+            <li>
+              <%= f.label :password, "Password:", :class => "field-title" %>
+              <label class="txt-field">
+                <%= f.password_field :password %>
+              </label>
+            </li>
+            <li>
+              <label class="remember">
+                <%= f.check_box :remember_me %>
+                Remember Me
+              </label>
+              <div class="align-right">
+                <%= image_submit_tag 'bt-login.gif', :action => "submit" %>
+					    </div>
+            </li>
+        </ol>
+        <% end %>
+			</fieldset>
+			<span class="clearFix">&nbsp;</span>
+			</form>
+		</div>
+</div>

@@ -1,0 +1,26 @@
+<div id="text_wrapper">
+  <h1> Hello, these are your tasks: </h1>
+  <br/>
+  <table>
+    <tr>
+      <th>Task ID</th>
+      <th>Description</th>
+      <th>Created On</th>
+      <th>Deadline</th>
+      <th>Completed?</th>
+      <th>Reminder</th>
+      <th></th>
+    </tr>
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.id =%></td>
+      <td><%= task.description =%></td>
+      <td><%= task.created_at =%></td>
+      <td><%= task.deadline =%></td>
+      <td><%= task.completed? =%></td>
+      <td><%= task.reminder =%></td>
+      <td><%= link_to "Edit Task", "/tasks/#{task.id}/edit" %>
+    </tr>
+  <% end %>
+</table>
+</div>

@@ -1,0 +1,27 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag 'user_landing' %>
+  <%= javascript_include_tag 'user_landing' %>
+  <%= javascript_include_tag 'quick_timer' %>
+<% end %>
+
+<div id="container">
+    <div class="hidden">
+    <div id="sample-modal"><h2 style="font-size:160%; font-weight:bold; margin:10px 0;">Modal Box Content</h2><p>Place your desired modal box content here</p></div>
+    </div><!-- end of hidden -->
+    <%= render "user_landing/header", :focus => "quick_timer" %>
+<div id="content">
+
+      <%= render "user_landing/left_column" %>
+    	<div id="mid-col" class="full-col">
+			<div class="box">
+				<span class="clearFix">&nbsp;</span>     
+		        <div class="box-container">
+					Clocky stuff will go in here, at some point, hopefully....
+				</div>
+			</div>
+     	</div>
+      <span class="clearFix">&nbsp;</span>     
+</div>
+<div class="push"></div>
+</div>
+<div id="footer-wrap"></div>

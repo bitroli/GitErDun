@@ -1,0 +1,23 @@
+    <div id="header">
+      <div id="top">
+      <h1><a href="#">Git 'Er Dun!</a></h1>
+      <p id="userbox">Hello <strong><%= current_user.first_name %></strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp; <%= link_to "Logout", destroy_user_session_path, :method => :delete  %> <br />
+      <small>Last Login: <%= l current_user.last_sign_in_at, :format => :long %></small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li <%= "class=selected" if focus == "tasks"%>><%= link_to "Tasks", users_path %></li>
+        <li <%= "class=selected" if focus == "quick_timer"%>><%= link_to "Quick Timers", quick_timer_path %></li>
+      </ul>
+	 <!-- <form action="" method="get" name="form1" id="form1">
+      <fieldset>
+      <legend>Search</legend>
+        <label id="searchbox">
+        <input type="text" name="s" id="s" />
+        </label>
+        <input class="hidden" type="submit" name="Submit" value="Search" />
+      </fieldset>
+      </form> -->
+      <span class="clearFix">&nbsp;</span>
+    </div><!-- end of #header -->
+

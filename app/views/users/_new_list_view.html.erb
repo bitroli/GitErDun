@@ -1,0 +1,65 @@
+    	  <div class="box">
+      		<h4 class="white">Upcoming Tasks</h4>
+        <div class="box-container">     		
+      		<table class="table-long" id="pending-tasks">
+      			<thead>
+      				<tr>
+      					<td>Deadline</td>
+      					<td>Description</td>
+      					<td></td>
+      				</tr>
+      			</thead>
+      			<tfoot>
+      			</tfoot>
+            <tbody>
+              <% @tasks.each do |t| %>
+                <% if not t.completed %>
+                <tr class='<%= cycle("odd", "") %><%= " focus" if params[:task_id] == String(t.id) %>'>
+                  <td class="col-first"><%= t.deadline %></td>
+                  <td class="col-second"><%= link_to (truncate t.description, :length => 50), :view => "list", :tasks => "new", :task_id => t.id  %></td>
+                  <td class="row-nav">
+                    <%= link_to "Edit", edit_task_path(t), :class => "table-edit-link" %>
+                    <span class="hidden"> | </span> 
+                    <%= link_to "Delete", t, :class => "table-delete-link", :method => :delete, :confirm => "Are you sure?" %>
+                </tr>
+                <%end%>
+                <%end%>
+					<%= link_to "New Task", new_task_path, :class => "table-new-link" %>
+      			</tbody>
+      		</table>  	
+      	</div><!-- end of div.box-container -->
+      </div> <!-- end of div.box -->
+
+	<% if @display_task != nil %>
+   	<div class="box">
+      		<h4 class="white">When?</h4>
+        <div class="box-container">     		
+      		<table class="table-long">
+      			<thead>
+      				<tr>
+						<td>Created At</td>
+      					<td>Deadline</td>
+      					<td>Reminder</td>
+						<td>Overdue?</td>
+      				</tr>
+      			</thead>
+      			<tfoot>
+      			</tfoot>
+            <tbody>
+				<tr>
+					<td class="col-first"><%= @display_task.created_at %></td>
+					<td class="col-first"><%= @display_task.deadline %></td>
+					<td class="col-first"><%= @display_task.reminder %></td>
+					<td class="row-nav"><%= @is_overdue.capitalize %></td>
+				</tr>
+      			</tbody>
+      		</table>  	
+      	</div><!-- end of div.box-container -->
+      </div> <!-- end of div.box -->
+   	<div class="box">
+      		<h4 class="white">What?</h4>
+        <div class="box-container table-long">     		
+      		<%= simple_format @display_task.description %>
+      	</div><!-- end of div.box-container -->
+      </div> <!-- end of div.box -->
+<%end %>

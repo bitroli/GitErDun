@@ -1,0 +1,21 @@
+<div id='topbar'>
+  <div class='left'>
+    <h1>GitErDun</h1>
+  </div>
+    <div class='right'>
+      <%if user_signed_in? %>
+        Welcome, <%= current_user.first_name %>.
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
+      <% else %>
+        Hello! Please <%= link_to "sign in", new_user_session_path %> or <%= link_to "create an account", new_user_registration_path %>.
+      <% end %>
+   </div>
+</div>
+
+<div id='bottombar'>
+      <%if not user_signed_in? %>
+          <%= render :partial => "bottom" %>
+        <% else%>
+          <%= render :partial => "splash" %>          
+      <% end %>
+</div>

@@ -1,0 +1,49 @@
+<div id="left-col">
+	<div class="box">
+		<h4 class="yellow">
+			Activities
+		</h4>
+		<div class="box-container">
+			<!-- use no-padding wherever you need element padding gone -->
+			<ul class="list-links">
+				<li>
+					<a href="#">Upcoming Tasks</a>
+					<ul>
+						<li>
+							<%= link_to "List View", users_path(:view => "list", :tasks => "new")%>
+						</li>
+						<li>
+							<%= link_to "Calendar View", users_path(:view => "calendar", :tasks => "new")%>
+						</li>
+						<li>
+							<a href="#">Export</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Finished Tasks</a>
+					<ul>
+						<li>
+							<%= link_to "List View", users_path(:view => "list", :tasks => "old")%>
+						</li>
+						<li>
+							<%= link_to "Calendar View", users_path(:view => "calendar", :tasks => "old")%>
+						</li>
+						<li>
+							<a href="#">Export</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div><!--end of div.box-container -->
+	</div>
+	<div class="box">
+		<h4 class="yellow">
+			Time
+		</h4>
+		<div class="box-container">
+			<%= render :partial => "user_landing/date_widget" %>
+		</div>
+	</div>
+</div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
+<!-- end of div#left-col -->

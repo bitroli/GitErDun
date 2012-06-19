@@ -1,0 +1,41 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag 'user_landing' %>
+  <%= javascript_include_tag 'user_landing' %>
+<% end %>
+
+<div id="container">
+    <div class="hidden">
+    <div id="sample-modal"><h2 style="font-size:160%; font-weight:bold; margin:10px 0;">Modal Box Content</h2><p>Place your desired modal box content here</p></div>
+    </div><!-- end of hidden -->
+    <%= render "header" %>
+<div id="content">
+
+      <%= render "left_column" %>
+      <%= render "list_view" %>
+      
+      <span class="clearFix">&nbsp;</span>     
+
+</div><!-- end of div#content -->
+<div class="push"></div>
+</div><!-- end of #container -->
+
+<div id="footer-wrap">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">Cleanity</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2009 Cleanity. Theme by Onur Oztaskiran of <a href="http://www.monofactor.com">Monofactor</a>, 
+            via <a href="http://themeforest.net">Themeforest</a></p>
+        </div>
+        
+	</div>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  deadline: 2012-05-31 16:52:46
+  description: MyString
+  reminder: 2012-05-31 16:52:46
+  completed: false
+  user: 
+
+two:
+  deadline: 2012-05-31 16:52:46
+  description: MyString
+  reminder: 2012-05-31 16:52:46
+  completed: false
+  user: 

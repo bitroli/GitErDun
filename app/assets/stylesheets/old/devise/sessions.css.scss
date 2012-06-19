@@ -1,0 +1,48 @@
+/*
+ * = require_self
+ */
+$blue: #00ADFF; 
+$lightblue: #4786B3;
+
+#user_new {
+  float:left;
+  margin: 1em;
+  border-width: 1px;
+  border-color: gray;
+} 
+
+html {
+  background-color: $lightblue; 
+}
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+#logon_box {
+  margin: 3em auto;
+  width: 13%;
+  padding: 1em;
+  border-radius: 15px;
+//  float:left;
+  border-width: 1px;
+  border-radius: 5px;
+  background: white;
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,white),color-stop(100%,#DDD));
+  background: -webkit-linear-gradient(top,white 0,#DDD 100%);
+  background: -moz-linear-gradient(top,white 0,#DDD 100%);
+  background: -ms-linear-gradient(top,white 0,#DDD 100%);
+  background: -o-linear-gradient(top,white 0,#DDD 100%);
+  background: linear-gradient(top,white 0,#DDD 100%);
+  border-left: solid 1px #EEE;
+  border-right: solid 1px #EEE;
+  border-bottom: solid 1px #CCC;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
