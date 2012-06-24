@@ -1,4 +1,4 @@
 <div id="date-container">
-  <img src="<%=asset_path "sunny.png" %>" alt="Sunny"> <span class="hour">22:54</span> <span class="date">18th May 2009<br>Friday</span>
+  <img src="<%=asset_path "sunny.png" %>" alt="Sunny"> <span class="hour"><%= Time.now.strftime("%H:%M") %></span> <span class="date">18th May 2009<br>Friday</span>
       <span class="clearFix">&nbsp;</span>
 </div>

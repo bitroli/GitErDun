@@ -47,3 +47,11 @@
 	</div>
 </div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
 <!-- end of div#left-col -->
+
+<!-- Maybe refactor this guy, write the JS in-line and have the menu be customized by the templating engine? -->
+<%= if params[:tasks]  == "old"
+	 javascript_include_tag "old_accordion"
+	else
+	 javascript_include_tag "new_accordion"
+	end
+%>

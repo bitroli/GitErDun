@@ -1,6 +1,7 @@
 <% content_for :header do -%>
   <%= stylesheet_link_tag 'user_landing' %>
-  <%= javascript_include_tag 'user_landing' %>
+  <%= javascript_include_tag 'user_landing'	%>
+
 <% end %>
 
 <div id="container">
@@ -9,7 +10,6 @@
     </div><!-- end of hidden -->
     <%= render "user_landing/header", :focus => "tasks" %>
 <div id="content">
-
       <%= render "user_landing/left_column" %>
     	<div id="mid-col" class="full-col">
 		<%= 

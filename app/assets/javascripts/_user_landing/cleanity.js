@@ -11,8 +11,7 @@ $(function(){
 
 	$('#to-do').tabs();		 
 	$("#calendar").datepicker();/** jquery ui calendar/date picker - see jquery ui docs for help: http://jqueryui.com/demos/ **/
-	$("ul.list-links").accordion();/** side menu accordion - see jquery ui docs for help:  http://jqueryui.com/demos/  **/
-
+	
  
 	jQuery(navSelector).find('a').css( {backgroundPosition: "0 0"} );
 	
